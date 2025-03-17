@@ -12,9 +12,9 @@ body {
 
 .container {
     width: 100%;
-    max-width: 900px; /* Keeping width at 900px as per original */
+    max-width: 900px;
     background-color: white;
-    padding: 20px; /* Reduced padding from 30px to 20px */
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
@@ -22,35 +22,35 @@ body {
 h1 {
     text-align: center;
     color: #333;
-    font-size: 2em; /* Reduced from 2.5em to 2em */
-    margin-bottom: 15px; /* Reduced from 20px to 15px */
+    font-size: 2em;
+    margin-bottom: 15px;
 }
 
 .chat-box {
-    height: 300px; /* Reduced from 500px to 300px for a shorter chat box */
+    height: 300px; /* Reduced from 500px to 300px */
     border: 1px solid #ccc;
     border-radius: 6px;
-    padding: 10px; /* Reduced padding from 15px to 10px */
+    padding: 10px;
     overflow-y: auto;
-    margin-bottom: 15px; /* Reduced from 20px to 15px */
+    margin-bottom: 15px;
     background-color: #f9f9f9;
-    font-size: 1em; /* Reduced from 1.1em to 1em for compactness */
+    font-size: 1em;
 }
 
 .chat-box .user {
     text-align: right;
     color: #007bff;
     font-weight: bold;
-    margin: 10px 0; /* Reduced from 15px to 10px */
+    margin: 15px 0;
 }
 
 .chat-box .agent {
-    margin: 10px 0; /* Reduced from 15px to 10px */
+    margin: 15px 0;
 }
 
 /* Style for collapsible sections (e.g., Morning, Midday) */
 .section {
-    margin-bottom: 10px; /* Reduced from 15px to 10px */
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 6px;
     overflow: hidden;
@@ -59,13 +59,13 @@ h1 {
 .section-header {
     background-color: #007bff;
     color: white;
-    padding: 8px; /* Reduced from 10px to 8px */
+    padding: 10px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
-    font-size: 1.1em; /* Reduced from 1.2em to 1.1em */
+    font-size: 1.2em;
 }
 
 .section-header:hover {
@@ -78,7 +78,7 @@ h1 {
 
 .section-content {
     display: none; /* Hidden by default */
-    padding: 8px; /* Reduced from 10px to 8px */
+    padding: 10px;
     background-color: #fff;
 }
 
@@ -86,8 +86,8 @@ h1 {
 .step {
     display: flex;
     align-items: flex-start;
-    padding: 8px; /* Reduced from 10px to 8px */
-    margin: 3px 0; /* Reduced from 5px to 3px */
+    padding: 10px;
+    margin: 5px 0;
     border-left: 3px solid #007bff;
     background-color: #f9f9f9;
     border-radius: 4px;
@@ -99,9 +99,9 @@ h1 {
 }
 
 .step i {
-    margin-right: 8px; /* Reduced from 10px to 8px */
+    margin-right: 10px;
     color: #007bff;
-    font-size: 1.1em; /* Reduced from 1.2em to 1.1em */
+    font-size: 1.2em;
 }
 
 .step-text {
@@ -115,46 +115,46 @@ h1 {
 .chat-box hr {
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 10px 0; /* Reduced from 15px to 10px */
+    margin: 15px 0;
 }
 
 .loading {
     display: none;
     text-align: center;
-    padding: 8px; /* Reduced from 10px to 8px */
+    padding: 10px;
     background-color: #e6f0fa;
     border-radius: 4px;
     color: #007bff;
     font-style: italic;
     font-weight: bold;
-    margin-bottom: 15px; /* Reduced from 20px to 15px */
+    margin-bottom: 20px;
 }
 
 .loading i {
-    margin-right: 6px; /* Reduced from 8px to 6px */
+    margin-right: 8px;
 }
 
 .input-container {
     display: flex;
-    gap: 10px; /* Reduced from 15px to 10px */
+    gap: 15px;
 }
 
 input {
     flex: 1;
-    padding: 10px; /* Reduced from 12px to 10px */
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1em; /* Reduced from 1.1em to 1em */
+    font-size: 1.1em;
 }
 
 button {
-    padding: 10px 20px; /* Reduced from 12px 25px to 10px 20px */
+    padding: 12px 25px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1em; /* Reduced from 1.1em to 1em */
+    font-size: 1.1em;
 }
 
 button:hover {

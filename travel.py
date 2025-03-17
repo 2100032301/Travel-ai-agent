@@ -8,7 +8,7 @@ from autogen_agentchat.ui import Console
 from autogen_agentchat.messages import TextMessage  # Import TextMessage for type hinting
 
 # Set OpenAI API key directly (consider moving to environment variables for security)
-API_KEY = "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"
+API_KEY = "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"
 
 # Initialize OpenAI client
 model_client = OpenAIChatCompletionClient(
@@ -50,17 +50,6 @@ travel_summary_agent = AssistantAgent(
     system_message="You compile inputs from all agents into a well-structured, final travel plan. Your response must be a complete itinerary. Once done, respond with TERMINATE."
 )
 
-# ------------------------- Setup Group Chat -------------------------
-
-# Define termination condition - Stops when "TERMINATE" is mentioned
-termination = TextMentionTermination("TERMINATE")
-
-# Create a Round-Robin chat where each agent takes turns contributing
-group_chat = RoundRobinGroupChat(
-    [planner_agent, local_agent, language_agent, travel_summary_agent],  # Pass agents as a list
-    termination_condition=termination
-)
-
 # ------------------------- API Function for Web Interface -------------------------
 async def run_travel_planner(task: str):
     """
@@ -85,6 +74,13 @@ async def run_travel_planner(task: str):
     responses = []
     
     try:
+        # Create a new group chat instance for each request
+        termination = TextMentionTermination("TERMINATE")
+        group_chat = RoundRobinGroupChat(
+            [planner_agent, local_agent, language_agent, travel_summary_agent],
+            termination_condition=termination
+        )
+        
         async for msg in group_chat.run_stream(task=task):
             # Debug: Print the message object and its attributes to find the agent name
             print(f"Debug: msg = {msg}, dir(msg) = {dir(msg)}")
@@ -120,9 +116,15 @@ async def run_travel_planner(task: str):
     
     return responses
 
-# ------------------------- Run the System -------------------------
+# ------------------------- Run the System (for testing locally) -------------------------
 async def main():
     print("\n🚀 Starting AI-powered Travel Planning System...\n")
+    # Create a new group chat for local testing
+    termination = TextMentionTermination("TERMINATE")
+    group_chat = RoundRobinGroupChat(
+        [planner_agent, local_agent, language_agent, travel_summary_agent],
+        termination_condition=termination
+    )
     await Console(group_chat.run_stream(task="Plan a 3-day trip to San Francisco."))
 
 # Run the event loop
