@@ -8,7 +8,7 @@ from autogen_agentchat.ui import Console
 from autogen_agentchat.messages import TextMessage  # Import TextMessage for type hinting
 
 # Set OpenAI API key directly (consider moving to environment variables for security)
-API_KEY = "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"
+API_KEY = "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"
 
 # Initialize OpenAI client
 model_client = OpenAIChatCompletionClient(
