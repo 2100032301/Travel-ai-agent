@@ -1,0 +1,26 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Travel Planner</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Travel Planner</h1>
+        <div class="chat-box" id="chatBox"></div>
+        <div id="loading" class="loading">
+            <i class="fas fa-spinner fa-spin"></i> Please wait while the AI plans your trip...
+        </div>
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Enter your travel request (e.g., Plan a 1-day trip to Hyderabad)">
+            <button onclick="sendRequest()">Plan Trip</button>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
